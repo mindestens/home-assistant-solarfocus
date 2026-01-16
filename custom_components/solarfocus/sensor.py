@@ -281,7 +281,7 @@ HEATING_CIRCUIT_SENSOR_TYPES = [
         key="state",
         icon="mdi:radiator",
         device_class=SensorDeviceClass.ENUM,
-        options=list(range(32)) + list(range(200, 229)),
+        options=list(range(37)) + list(range(200, 229)),
     ),
 ]
 
@@ -416,7 +416,7 @@ HEATPUMP_SENSOR_TYPES = [
     ),
     SolarfocusSensorEntityDescription(
         key="compressor_speed",
-        native_unit_of_measurement=REVOLUTIONS_PER_MINUTE,
+        native_unit_of_measurement="U/min",
         icon="mdi:gauge",
         state_class=SensorStateClass.MEASUREMENT,
     ),

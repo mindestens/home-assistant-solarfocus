@@ -28,8 +28,9 @@
    - [HACS Installation](#hacs-installation)
    - [Manual Installation](#manual-installation)
    - [Integration Setup](#integration-setup)
-5. [Contribution](#contribution)
-6. [Localization](#localization)
+5. [Breaking Changes](#breaking-changes)
+6. [Contribution](#contribution)
+7. [Localization](#localization)
    
 </details>
 
@@ -40,6 +41,10 @@ This Home Assistant custom component is a community driven effort to integrate S
 
 > **Warning**
 > Use with caution, in case of doubt check with Solarfocus or your installer if a feature / functionality (e.g. cooling) is supported by your installation to avoid damages to your heating system or the building.
+
+> **Important - API Version v25.050 Support**
+> This version adds support for Solarfocus API version **v25.050** which is now the default for new installations.
+> A critical bug fix for heating circuit register offsets has been implemented (requires pysolarfocus v5.1.5).
 
 The project uses the Python library [pysolarfocus](https://github.com/LavermanJJ/pysolarfocus) for retrieving values via Modbus TCP from the heating system.
 
@@ -68,9 +73,9 @@ Additionally, it is only possible to set the state (_preset_) but not setting th
 ### Software
 
 > **Important**
-> This integration has been tested with Solarfocus eco<sup>manager-touch</sup> version `25.030`.
+> This integration has been tested with Solarfocus eco<sup>manager-touch</sup> version `25.050`.
 
-Supported versions: `21.140` - `25.030`. Features added in later versions are not yet supported.
+Supported versions: `21.140` - `25.050`. The integration defaults to API version `25.050` for new installations.
 
 The eco<sup>manager-touch</sup> Modbus TCP specification can be found [here](https://www.solarfocus.com/de/partnerportal/pdf/open/UGFydG5lcmJlcmVpY2gtREUvUmVnZWx1bmdfZWNvbWFuYWdlci10b3VjaC9BbmxlaXR1bmdlbi9lY29tYW5hZ2VyLXRvdWNoX01vZGJ1cy1UQ1AtUmVnaXN0ZXJkYXRlbl9BbmxlaXR1bmcucGRm/117920/0/Lng_YSxpM245S30zMTc4W2Y8cVRRXWlJVWRQJDsv?serialNumber=21010).
 

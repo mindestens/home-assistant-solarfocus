@@ -50,6 +50,7 @@ SOLARFOCUS_SYSTEMS = [
 
 # CONF_API_VERSION
 SOLARFOCUS_API_VERSIONS = [
+    selector.SelectOptionDict(value="25.050", label="v25.050"),
     selector.SelectOptionDict(value="25.030", label="v25.030"),
     selector.SelectOptionDict(value="23.040", label="v23.040"),
     selector.SelectOptionDict(value="23.020", label="v23.020"),
@@ -92,7 +93,7 @@ STEP_USER_DATA_SCHEMA = vol.Schema(
                 options=SOLARFOCUS_SYSTEMS, mode=selector.SelectSelectorMode.DROPDOWN
             ),
         ),
-        vol.Required(CONF_API_VERSION, default="23.020"): selector.SelectSelector(
+        vol.Required(CONF_API_VERSION, default="25.050"): selector.SelectSelector(
             selector.SelectSelectorConfig(
                 options=SOLARFOCUS_API_VERSIONS,
                 mode=selector.SelectSelectorMode.DROPDOWN,
@@ -282,7 +283,6 @@ class SolarfocusOptionsFlowHandler(config_entries.OptionsFlow):
 
     def __init__(self, config_entry: config_entries.ConfigEntry) -> None:
         """Initialize Solarfocus options flow."""
-
         self.config_entry = config_entry
         self.options = dict(config_entry.options)
         self._errors = {}
@@ -476,3 +476,4 @@ class InvalidAuth(HomeAssistantError):
 
 class InvalidScanInterval(HomeAssistantError):
     """Error to indicate there is invalid scan interval."""
+
