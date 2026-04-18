@@ -2,6 +2,47 @@
 
 All notable changes to this project will be documented in this file.
 
+## [6.0.1] - 2026-04-18
+
+### Changed
+
+- Updated pysolarfocus dependency to v5.1.6 (Python 3.14 compatibility)
+
+---
+
+## Type of Change
+
+- [x] Bug fix (non-breaking change which fixes an issue)
+- [ ] New feature
+- [ ] Breaking change
+
+## Impact
+
+- Fixes integration startup failure on Home Assistant installations running Python 3.14
+- No functional changes to the integration itself
+- No changes required for existing configurations
+
+---
+
+## Summary
+
+This PR updates the `pysolarfocus` dependency from `5.1.5` to `5.1.6` to restore compatibility with Home Assistant instances running Python 3.14.
+
+Integration version bumped from `6.0.0` → `6.0.1`.
+
+---
+
+## Problem
+
+Recent Home Assistant container updates ship with Python 3.14. All `pysolarfocus` releases up to and including `5.1.5` declare `Requires-Python: ~=3.13.0`, which means pip refuses to install them on Python 3.14:
+
+```
+ERROR: Package 'pysolarfocus' requires a different Python: 3.14.x not in '~=3.13.0'
+```
+
+
+## [6.0.0]
+
 ### Added
 
 - **Support for Solarfocus API version v25.050** (now default for new installations)
