@@ -35,6 +35,7 @@ class SolarfocusDataUpdateCoordinator(DataUpdateCoordinator):
 
         self.name = entry.title
         self._entry = entry
+        self.config_entry = entry  # Add public property for entity access
         self.hass = hass
 
         _LOGGER.info(

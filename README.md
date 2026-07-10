@@ -1,11 +1,11 @@
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration)
 [![Installs][installs-shield]][installs]
-[![Version](https://img.shields.io/github/v/tag/lavermanjj/home-assistant-solarfocus?style=for-the-badge&label=Version&color=orange)](https://img.shields.io/github/v/tag/lavermanjj/home-assistant-solarfocus?style=for-the-badge&label=Version&color=orange)
-[![License](https://img.shields.io/github/license/lavermanjj/home-assistant-solarfocus?style=for-the-badge)](https://img.shields.io/github/license/lavermanjj/home-assistant-solarfocus?style=for-the-badge)
+[![Version](https://img.shields.io/github/v/tag/mindestens/home-assistant-solarfocus?style=for-the-badge&label=Version&color=orange)](https://github.com/mindestens/home-assistant-solarfocus/releases)
+[![License](https://img.shields.io/github/license/mindestens/home-assistant-solarfocus?style=for-the-badge)](https://github.com/mindestens/home-assistant-solarfocus/blob/main/LICENSE)
 
 
 <p align="center">
-  <a href="https://github.com/lavermanjj/home-assistant-solarfocus">
+  <a href="https://github.com/mindestens/home-assistant-solarfocus">
     <img src="https://brands.home-assistant.io/solarfocus/logo.png" alt="Logo" height="80">
   </a>
 </p>
@@ -26,10 +26,12 @@
 4. [Getting Started](#getting-started)
    - [Prerequisites](#prerequisites)
    - [HACS Installation](#hacs-installation)
+    - [Fork Installation for HA Updates](#fork-installation-for-ha-updates)
    - [Manual Installation](#manual-installation)
    - [Integration Setup](#integration-setup)
-5. [Contribution](#contribution)
-6. [Localization](#localization)
+5. [Release Notes](#release-notes)
+6. [Contribution](#contribution)
+7. [Localization](#localization)
    
 </details>
 
@@ -41,7 +43,11 @@ This Home Assistant custom component is a community driven effort to integrate S
 > **Warning**
 > Use with caution, in case of doubt check with Solarfocus or your installer if a feature / functionality (e.g. cooling) is supported by your installation to avoid damages to your heating system or the building.
 
-The project uses the Python library [pysolarfocus](https://github.com/LavermanJJ/pysolarfocus) for retrieving values via Modbus TCP from the heating system.
+> **Important - API Version v25.050 Support**
+> This version adds support for Solarfocus API version **v25.050** which is now the default for new installations.
+> A critical bug fix for heating circuit register offsets has been implemented (requires pysolarfocus v5.1.6).
+
+The project uses the Python library [pysolarfocus](https://github.com/mindestens/pysolarfocus) for retrieving values via Modbus TCP from the heating system.
 
 ## Home Assistant Device Types
 
@@ -68,9 +74,9 @@ Additionally, it is only possible to set the state (_preset_) but not setting th
 ### Software
 
 > **Important**
-> This integration has been tested with Solarfocus eco<sup>manager-touch</sup> version `25.030`.
+> This integration has been tested with Solarfocus eco<sup>manager-touch</sup> version `25.050`.
 
-Supported versions: `21.140` - `25.030`. Features added in later versions are not yet supported.
+Supported versions: `21.140` - `25.050`. The integration defaults to API version `25.050` for new installations.
 
 The eco<sup>manager-touch</sup> Modbus TCP specification can be found [here](https://www.solarfocus.com/de/partnerportal/pdf/open/UGFydG5lcmJlcmVpY2gtREUvUmVnZWx1bmdfZWNvbWFuYWdlci10b3VjaC9BbmxlaXR1bmdlbi9lY29tYW5hZ2VyLXRvdWNoX01vZGJ1cy1UQ1AtUmVnaXN0ZXJkYXRlbl9BbmxlaXR1bmcucGRm/117920/0/Lng_YSxpM245S30zMTc4W2Y8cVRRXWlJVWRQJDsv?serialNumber=21010).
 
@@ -105,6 +111,18 @@ You can find it in the default HACS repo. Just search `Solarfocus`.
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration)
 
+### Fork Installation for HA Updates
+
+If you rely on API `25.050` and Python 3.14 compatibility, use the forked repository in HACS:
+
+- Add custom repository in HACS: `https://github.com/mindestens/home-assistant-solarfocus`
+- Category: `Integration`
+- Install Solarfocus from that custom repository
+
+If Solarfocus is already installed from the default source, switch the repository source to this fork before the next update so custom dependency pins are not overwritten.
+
+This branch pins `pysolarfocus` to a fixed tag in the fork (`v5.1.6-ha314`) so dependency installation remains stable after Home Assistant updates and container rebuilds.
+
 
 ### Manual Installation
 
@@ -114,6 +132,15 @@ You can find it in the default HACS repo. Just search `Solarfocus`.
 ### Integration Setup
 
 [![Open your Home Assistant instance and start setting up a new integration.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=solarfocus) 
+
+## Release Notes
+
+- Changelog: [CHANGELOG.md](CHANGELOG.md)
+- Fork releases: [GitHub Releases](https://github.com/mindestens/home-assistant-solarfocus/releases)
+
+Current forked release baseline:
+- Integration version: `6.0.1`
+- Pinned dependency: `pysolarfocus` from `mindestens/pysolarfocus` tag `v5.1.6-ha314`
 
 ## Contribution
 
