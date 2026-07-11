@@ -124,8 +124,8 @@ class SolarfocusEntity(Entity):
         return {
             "identifiers": {(DOMAIN, device)},
             "name": "Solarfocus",
-            "model": {model},
-            "sw_version": {api_version},
+            "model": model,
+            "sw_version": api_version,
             "manufacturer": "Solarfocus",
         }
 
