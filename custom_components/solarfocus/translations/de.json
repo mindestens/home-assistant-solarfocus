@@ -316,7 +316,7 @@
           "18": "Sicherheitskette ist offen, Nachlauf",
           "19": "Restsauerstoffgehalt zu hoch, Nachlauf",
           "20": "Abgastemperatur zu gering, Nachlauf",
-          "21": "Abgastemperatur zu hoch, Bereitschaft",
+          "21": "Abgastemperatur liegt über {RGT_Start}, Bereitschaft",
           "22": "Abgasfühler ist defekt, Bereitschaft",
           "23": "Einschubtemperatur zu hoch, Bereitschaft",
           "24": "Lambdasonde ist defekt, Nachlauf",
