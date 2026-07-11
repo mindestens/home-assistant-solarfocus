@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Unreleased]
+
+### Fixed
+
+- Restored clean Solarfocus device info display for API 25.050 by returning `model` and `sw_version` as plain strings (no set formatting like `{'Vampair'}`).
+
 ## [6.0.1] - 2026-04-18
 
 ### Changed
