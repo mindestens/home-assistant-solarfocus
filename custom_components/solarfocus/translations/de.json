@@ -58,8 +58,149 @@
     }
   },
   "entity": {
+    "binary_sensor": {
+      "hc_limit_thermostat": {
+        "name": "Begrenzungsthermostat"
+      },
+      "hc_circulator_pump": {
+        "name": "Heizkreispumpe"
+      },
+      "bu_pump": {
+        "name": "Pufferpumpe"
+      },
+      "hp_evu_lock_active": {
+        "name": "EVU-Sperre aktiv"
+      },
+      "hp_defrost_active": {
+        "name": "Abtauen aktiv"
+      },
+      "hp_boiler_charge": {
+        "name": "Boilerladung"
+      },
+      "bb_door_contact": {
+        "name": "Türkontakt"
+      },
+      "pv_overcharge_possible": {
+        "name": "Überschussladung möglich"
+      },
+      "pv_overcharge_active": {
+        "name": "Überschussladung aktiv"
+      },
+      "fm_valve": {
+        "name": "Ventil"
+      }
+    },
+    "number": {
+      "hc_target_supply_temperature": {
+        "name": "Vorlaufsolltemperatur"
+      },
+      "hc_target_room_temperature": {
+        "name": "Raumsolltemperatur"
+      },
+      "hc_indoor_temperature_external": {
+        "name": "Raumtemperatur extern"
+      },
+      "hc_indoor_humidity_external": {
+        "name": "Raumfeuchte extern"
+      },
+      "bo_target_temperature": {
+        "name": "Solltemperatur"
+      }
+    },
+    "button": {
+      "bo_single_charge": {
+        "name": "Einmalladung"
+      },
+      "bo_circulation": {
+        "name": "Zirkulation"
+      }
+    },
     "sensor": {
+      "hc_supply_temperature": {
+        "name": "Vorlauftemperatur"
+      },
+      "hc_room_temperature": {
+        "name": "Raumtemperatur"
+      },
+      "hc_humidity": {
+        "name": "Feuchte"
+      },
+      "hc_mixer_valve": {
+        "name": "Mischerstellung"
+      },
+      "hc_state": {
+        "name": "Status Heizkreis",
+        "state": {
+          "0": "Heizkreis ist ausgeschaltet",
+          "1": "Absenkbetrieb",
+          "10": "Raumsolltemperatur Heizbetrieb erreicht",
+          "11": "Trinkwasserspeichervorrang ist aktiv",
+          "12": "Dauerheizbetrieb",
+          "13": "Dauerabsenkbetrieb",
+          "14": "Außenfühlerunterbrechung",
+          "15": "min. Energiequellentemperatur unterschritten",
+          "16": "Vorlauffühler defekt",
+          "17": "min. Energiequellentemperatur unterschritten, Frostschutzbetrieb",
+          "18": "Testlauf Pumpe ist aktiv",
+          "19": "Partybetrieb",
+          "2": "Heizbetrieb",
+          "20": "Begrenzungsthermostat ist offen",
+          "21": "Pumpen Nachlauf",
+          "22": "Defrost",
+          "23": "Kühlbetrieb",
+          "24": "Kühlen hat Vorrang",
+          "25": "Heizen hat Vorrang",
+          "26": "Pool hat Vorrang",
+          "27": "Außenabschalttemperatur Absenkbetrieb erreicht",
+          "28": "Raumsolltemperatur Absenkbetrieb erreicht",
+          "29": "Min. Rücklauftemperatur – Regelung vampair",
+          "3": "Ferienbetrieb",
+          "30": "Außenabschalttemperatur Kühlen erreicht",
+          "31": "Warte auf Kühlbetrieb der Wärmepumpe",
+          "32": "Raumsolltemperatur Kühlbetrieb erreicht",
+          "33": "Keine Zeitfreigabe Kühlbetrieb",
+          "34": "Vorlaufsollbegrenzung wegen Wärmepumpenfehler",
+          "35": "Warte auf Kühlfreigabe",
+          "36": "Warte auf Kühlfreigabe, Heizbetriebe sind aktiv",
+          "4": "Estrichprogramm",
+          "5": "Frostschutzbetrieb",
+          "6": "Kaminkehrer",
+          "7": "Heizkreis nicht freigeschaltet",
+          "8": "Wärmeableitung",
+          "9": "Außenabschalttemperatur Heizbetrieb erreicht",
+          "200": "Heizkreis ist ausgeschaltet",
+          "201": "Dauerheizbetrieb",
+          "202": "Trinkwasserspeichervorrang ist aktiv",
+          "203": "Dauerabsenkbetrieb",
+          "204": "Außenfühler Unterbrechung oder Kurzschluss",
+          "205": "Min. Energiequellentemperatur unterschritten",
+          "206": "Absenkbetrieb",
+          "207": "Heizbetrieb",
+          "208": "Ferienbetrieb",
+          "209": "Estrichprogramm",
+          "210": "Frostschutzbetrieb",
+          "211": "Kaminkehrer",
+          "212": "Heizkreis ist nicht freigeschaltet",
+          "213": "Wärmeableitung",
+          "214": "Außenabschalttemperatur Heizbetrieb erreicht",
+          "215": "Raumsolltemperatur Heizbetrieb erreicht",
+          "217": "Min. Energiequellentemperatur unterschritten, Frostschutzbetrieb",
+          "218": "Begrenzungsthermostat ist offen",
+          "219": "Testlauf Pumpe ist aktiv",
+          "220": "Min. Puffertemperatur oben ist unterschritten",
+          "221": "Min. Puffertemperatur oben ist unterschritten, Frostschutzbetrieb",
+          "222": "Außenabschalttemperatur Absenkbetrieb erreicht",
+          "223": "Absenkbetrieb, verminderter Vorrang des TWS aktiv",
+          "224": "Raumsolltemperatur Absenkbetrieb erreicht",
+          "225": "Testlauf Mischer ist aktiv",
+          "226": "Partybetrieb",
+          "227": "Raumsolltemperatur Partybetrieb erreicht",
+          "228": "Außenabschalttemperatur Partybetrieb erreicht"
+        }
+      },
+
       "fm_state" : {
+        "name": "Frischwassermodul - Status",
         "state" : {
           "0": "Vorlauffühler nicht angeschlossen",
           "1": "Pumpe ausgeschaltet",
@@ -67,24 +208,74 @@
           "3": "Handbetrieb aktiv",
           "4": "Handbetrieb deaktiviert"
         }
+      },      "fm_supply_temperature": {
+        "name": "Vorlauftemperatur"
+      },
+      "fm_flow_rate": {
+        "name": "Durchfluss"
+      },
+      "fm_target_temperature": {
+        "name": "Solltemperatur"
+      },
+      "bo_temperature": {
+        "name": "Boilertemperatur"
       },
       "bo_mode" : {
+        "name": "Boiler - Betriebsart",
         "state" : {
           "0": "Immer Aus",
           "1": "Immer Ein",
-          "2": "Montag \u2013 Sontag",
-          "3": "Blockweise (Montag \u2013 Freitag, Samstag \u2013 Sontag)",
+          "2": "Montag \u2013 Sonntag",
+          "3": "Blockweise (Montag \u2013 Freitag, Samstag \u2013 Sonntag)",
           "4": "Tageweise"
         }
       },
-      "bu_mode" : {
+      "bu_top_temperature": {
+        "name": "Puffertemperatur oben"
+      },
+      "bu_bottom_temperature": {
+        "name": "Puffertemperatur unten"
+      },
+      "bu_x35_temperature": {
+        "name": "Puffertemperatur X35"
+      },
+      "bu_external_top_temperature_x44": {
+        "name": "Externe Puffertemperatur oben X44"
+      },
+      "bu_external_middle_temperature_x36": {
+        "name": "Externe Puffertemperatur Unten/Mitte X36"
+      },
+      "bu_external_bottom_temperature_x35": {
+        "name": "Externe Puffertemperatur unten X35"
+      },
+      "bu_mode": {
+        "name": "Puffer - Freigabeart",
         "state" : {
           "0": "Immer Aus",
           "1": "Immer Ein",
           "2": "Zeitschaltung"
         }
       },
+      "pv_power": {
+        "name": "PV Leistung"
+      },
+      "pv_house_consumption": {
+        "name": "Verbrauch gesamt"
+      },
+      "pv_heatpump_consumption": {
+        "name": "Verbrauch WP"
+      },
+      "pv_grid_import": {
+        "name": "Netzbezug"
+      },
+      "pv_grid_export": {
+        "name": "Netzeinspeisung"
+      },
+      "bb_temperature": {
+        "name": "Kesseltemperatur"
+      },
       "bb_mode" : {
+        "name": "Kessel - Betriebsart",
         "state" : {
           "0": "Stückholz",
           "1": "Stückholz Automatik",
@@ -95,12 +286,14 @@
         }
       },
       "bb_log_wood" : {
+        "name": "Stückholz",
         "state" : {
           "0": "Stückholz anheizen/ nachlegen nicht notwendig/möglich",
           "1": "Stückholz kann angeheizt/ nachgelegt werden"
         }
       },
       "bb_status" : {
+        "name": "Kesselstatus",
         "state" : {
           "0": "Bereitschaft",
           "1": "Zündphase",
@@ -252,6 +445,7 @@
         }
       },
       "bb_message_number" : {
+        "name": "Meldungsnummer",
         "state" : {
           "0": "Keine Meldung",
           "1": "Interner Speicher ist ungültig",
@@ -377,6 +571,7 @@
         }
       },
       "bo_circulation" : {
+        "name": "Boiler - Zirkulation",
         "state" : {
           "-1": "Gesperrt",
           "0": "Aus",
@@ -384,6 +579,7 @@
         }
       },
       "bo_single_charge" : {
+        "name": "Boiler - Einmalladung",
         "state" : {
           "-1": "Gesperrt",
           "0": "Aus",
@@ -391,6 +587,7 @@
         }
       },
       "bu_state" : {
+        "name": "Pufferstatus",
         "state" : {
           "0": "Status nicht vorhanden",
           "1": "Bereitschaft",
@@ -412,6 +609,7 @@
         }
       },
       "bo_state" : {
+        "name": "Boilerstatus",
         "state" : {
           "0": "Boilerstatus nicht vorhanden",
           "1": "Bereitschaft",
@@ -511,7 +709,71 @@
           "228": "Außenabschalttemperatur Partybetrieb erreicht"
         }
       },
+      "hp_outdoor_temperature": {
+        "name": "Außentemperatur"
+      },
+      "hp_supply_temperature": {
+        "name": "Vorlauftemperatur"
+      },
+      "hp_return_temperature": {
+        "name": "Rücklauftemperatur"
+      },
+      "hp_flow_rate": {
+        "name": "Durchfluss"
+      },
+      "hp_compressor_speed": {
+        "name": "Verdichterdrehzahl"
+      },
+      "hp_thermal_energy_total": {
+        "name": "Wärmemenge gesamt"
+      },
+      "hp_thermal_energy_drinking_water": {
+        "name": "Wärmemenge Warmwasser"
+      },
+      "hp_thermal_energy_heating": {
+        "name": "Wärmemenge Heizen"
+      },
+      "hp_electrical_energy_total": {
+        "name": "Strommenge gesamt"
+      },
+      "hp_electrical_energy_drinking_water": {
+        "name": "Strommenge Warmwasser"
+      },
+      "hp_electrical_energy_heating": {
+        "name": "Strommenge Heizen"
+      },
+      "hp_electrical_power": {
+        "name": "Elektrische Leistung"
+      },
+      "hp_thermal_power_cooling": {
+        "name": "Kühlleistung"
+      },
+      "hp_thermal_power_heating": {
+        "name": "Heizleistung"
+      },
+      "hp_thermal_energy_cooling": {
+        "name": "Wärmemenge Kühlen"
+      },
+      "hp_electrical_energy_cooling": {
+        "name": "Strommenge Kühlen"
+      },
+      "hp_cop_cooling": {
+        "name": "COP Kühlen"
+      },
+      "hp_cop_heating": {
+        "name": "COP Heizen"
+      },
+      "hp_performance_overall": {
+        "name": "Jahresarbeitszahl"
+      },
+      "hp_performance_overall_heating": {
+        "name": "Jahresarbeitszahl Heizen"
+      },
+      "hp_performance_overall_drinking_water": {
+        "name": "Jahresarbeitszahl Warmwasser"
+      },
       "hp_vampair_state": {
+        "name": "Status Wärmepumpe",
         "state" : {
           "0": "Bereitschaft",
           "1": "Heizbetrieb",
@@ -528,7 +790,71 @@
           "9": "Fremdkessel aktiv, W\u00e4rmepumpe aus"
         }
       },
+      "bb_cleaning": {
+        "name": "Reinigung"
+      },
+      "bb_ash_container": {
+        "name": "Aschebehälter"
+      },
+      "bb_outdoor_temperature": {
+        "name": "Außentemperatur"
+      },
+      "bb_boiler_operating_mode": {
+        "name": "Kessel Betriebsart"
+      },
+      "bb_octoplus_buffer_temperature_bottom": {
+        "name": "Kesselzugtemperatur unten"
+      },
+      "bb_octoplus_buffer_temperature_top": {
+        "name": "Kesselzugtemperatur oben"
+      },
+      "bb_log_wood": {
+        "name": "Stückholz"
+      },
+      "bb_pellet_usage_last_fill": {
+        "name": "Pelletsverbrauch seit letzter Befüllung"
+      },
+      "bb_pellet_usage_total": {
+        "name": "Pelletsverbrauch gesamt"
+      },
+      "bb_heat_energy_total": {
+        "name": "Wärmeenergie gesamt"
+      },
+      "so_collector_temperature_1": {
+        "name": "Kollektortemperatur 1"
+      },
+      "so_collector_temperature_2": {
+        "name": "Kollektortemperatur 2"
+      },
+      "so_collector_supply_temperature": {
+        "name": "Kollektorvorlauftemperatur"
+      },
+      "so_collector_return_temperature": {
+        "name": "Kollektorrücklauftemperatur"
+      },
+      "so_flow_heat_meter": {
+        "name": "Durchfluss WMZ"
+      },
+      "so_current_power": {
+        "name": "Aktuelle Leistung"
+      },
+      "so_current_yield_heat_meter": {
+        "name": "Ertrag WMZ"
+      },
+      "so_today_yield": {
+        "name": "Tagesertrag"
+      },
+      "so_buffer_sensor_1": {
+        "name": "Speicherfühler 1"
+      },
+      "so_buffer_sensor_2": {
+        "name": "Speicherfühler 2"
+      },
+      "so_buffer_sensor_3": {
+        "name": "Speicherfühler 3"
+      },
       "so_state": {
+        "name": "Solar - Statuszeile",
         "state": {
           "0":"Solarkreis in Betrieb ",
           "201":" Kollektorfühler Kurzschluss!",
@@ -573,49 +899,65 @@
         }
       }
     },
-    "select" : {
+    "select": {
+      "bo_holding_mode": {
+        "name": "Betriebsart Speicherung",
+        "state": {
+          "0": "Immer Aus",
+          "1": "Immer Ein",
+          "2": "Montag \u2013 Sonntag",
+          "3": "Blockweise (Montag \u2013 Freitag, Samstag \u2013 Sonntag)",
+          "4": "Tageweise"
+        }
+      },
       "hp_smart_grid": {
+        "name": "Betriebsart SG-Ready",
         "state": {
           "0": "Deaktiviert",
-          "1": "Gesperrt",
+          "1": "Verdichter gesperrt",
           "2": "Normalbetrieb",
           "3": "Einschaltempfehlung",
           "4": "Einschaltung"
         }
       },
-      "hc_cooling" : {
-        "state" : {
+      "hc_cooling": {
+        "name": "Kühlung",
+        "state": {
           "0": "Heizen",
           "1": "Kühlen"
         }
       },
-      "hc_mode" : {
-        "state" : {
-          "0": "Dauerbetrieb",
-          "1": "Absenkbetrieb",
-          "2": "Automatik (Zeiteinstellung wird beachtet)",
-          "3": "Heizkreis ausgeschaltet (nur Frostwache)"
-        }
-      },
-      "hc_heating_mode" : {
-        "state" : {
+      "hc_heating_mode": {
+        "name": "Heizmodus",
+        "state": {
           "0": "Heizen",
           "1": "Kühlen",
           "2": "Heizen + Kühlen"
         }
       },
-      "bo_holding_mode" : {
-        "state" : {
-          "0": "Immer Aus",
-          "1": "Immer Ein",
-          "2": "Montag \u2013 Sontag",
-          "3": "Blockweise (Montag \u2013 Freitag, Samstag \u2013 Sontag)",
-          "4": "Tageweise"
+      "hc_mode": {
+        "name": "Betriebsart",
+        "state": {
+          "0": "Dauerbetrieb",
+          "1": "Absenkbetrieb",
+          "2": "Automatik (Zeiteinstellung wird beachtet)",
+          "3": "Heizkreis ausgeschaltet (nur Frostwache)"
         }
+      }
+    },
+    "switch": {
+      "hp_evu_lock": {
+        "name": "EVU-Sperre"
+      }
+    },
+    "water_heater": {
+      "bo_domestic_hot_water": {
+        "name": "Warmwasser"
       }
     },
     "climate": {
       "hc_thermostat": {
+        "name": "Thermostat",
         "state": {
           "off": "Aus",
           "heat": "Heizen",
