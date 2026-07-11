@@ -275,22 +275,24 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         config_entry: config_entries.ConfigEntry,
     ) -> config_entries.OptionsFlow:
         """Create the options flow."""
-        return SolarfocusOptionsFlowHandler(config_entry)
+        return SolarfocusOptionsFlowHandler()
 
 
 class SolarfocusOptionsFlowHandler(config_entries.OptionsFlow):
     """Solarfocus config flow options handler."""
 
-    def __init__(self, config_entry: config_entries.ConfigEntry) -> None:
+    def __init__(self) -> None:
         """Initialize Solarfocus options flow."""
-        self.config_entry = config_entry
-        self.options = dict(config_entry.options)
+        self.options = {}
         self._errors = {}
 
     async def async_step_init(
         self, user_input: dict[str, Any] | None = None
     ) -> FlowResult:
         """Manage the options."""
+
+        if not self.options:
+            self.options = dict(self.config_entry.options)
 
         errors = {}
 

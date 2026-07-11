@@ -7,6 +7,8 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 
 - Restored clean Solarfocus device info display for API 25.050 by returning `model` and `sw_version` as plain strings (no set formatting like `{'Vampair'}`).
+- Fixed Solarfocus options flow initialization for newer Home Assistant versions by aligning `OptionsFlow` construction with current API behavior.
+- Fixed German translation placeholder parity for `component.solarfocus.entity.sensor.bb_status.state.21` by keeping `{RGT_Start}` in `de.json`.
 
 ## [6.0.1] - 2026-04-18
 
